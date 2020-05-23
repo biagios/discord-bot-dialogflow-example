@@ -8,7 +8,7 @@ const uuid = require('uuid');
 const {Storage} = require('@google-cloud/storage');
 
 // Define the Google Project ID
-const projectId = 'GOOGLE PROJECT ID'
+const projectId = '[PROJECT_ID]'
 // Define the Google Project keyfile, follow instructions in wiki on how to get one.
 const keyFilename = './keyfile.json'
 
