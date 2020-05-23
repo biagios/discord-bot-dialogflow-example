@@ -1,5 +1,9 @@
 # Temp files
 .DS_Store
 
+# Modules
+node_modules
+package-lock.json
+
 # Secret files
 config.js

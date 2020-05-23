@@ -7,8 +7,14 @@ const uuid = require('uuid');
 // Imports the Google Cloud client library.
 const {Storage} = require('@google-cloud/storage');
 
-// Creates a client.
-const storage = new Storage();
+// Define the Google Project ID
+const projectId = 'GOOGLE PROJECT ID'
+// Define the Google Project keyfile, follow instructions in wiki on how to get one.
+const keyFilename = './keyfile.json'
+
+// Instantiates a client.
+// If you don't specify credentials when constructing the client, the client library will look for credentials in the environment.
+const storage = new Storage({projectId, keyFilename});
 
 /**
  * Send a query to the dialogflow agent, and return the query result.

@@ -28,7 +28,7 @@ const { PREFIX, VERSION, TOKEN} = require('./config')
 // #### Defining various modules ####
 
 // Define dialogflow from the modules
-const runSample = require('./modules/dialog.js').runSample
+const askDialog = require('./modules/dialog.js').askDialog
 // Define 'util' module, this contains various scripts that are often used.
 const Util = require('./modules/util')
 // Define 'logger' module, this is used when logging what the bot does.
@@ -36,10 +36,10 @@ const Logger = new Util.Logger();
 // Degine 'fs' file system module.
 const fs = require('fs');
 // Imports the Google Cloud client library.
-const {Storage} = require('@google-cloud/storage');
+//const {Storage} = require('@google-cloud/storage');
 // Instantiates a client.
 // If you don't specify credentials when constructing the client, the client library will look for credentials in the environment.
-const storage = new Storage();
+//const storage = new Storage();
 
 
 // #### Load Commands ####
@@ -157,7 +157,7 @@ client.on('message', async message => {
 		// Remove the bot tag from the query.
 		dialogQuery = dialogQuery.replace("<@!300955174225051650>","")
 		// Run dialogflow
-		runSample(message,"pal-bot",dialogQuery)
+		askDialog(message,"pal-bot",dialogQuery)
 	}
 
 	// If the message recieved is not a command ignore it.
