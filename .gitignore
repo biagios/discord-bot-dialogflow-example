@@ -1,2 +1,5 @@
 # Temp files
 .DS_Store
+
+# Secret files
+config.js
