@@ -1,0 +1,31 @@
+// Any module required will be written up here
+
+
+/**
+ * Command: NAME
+ * Description: DESCRIPTION
+ * */
+
+module.exports = {
+  // Define the command name
+	name: 'NAME',
+
+  // Define the command description
+	description: 'DESCRIPTION',
+
+  // Actually execute the command
+	execute(message, args, config) {
+
+    // Define the command for later use
+    const command = args[0].slice(config.PREFIX.length,)
+
+    // Define the raw argument
+    const rawArgument = args.join(' ')
+
+    // Define the argument (prefix and command taken away)
+    const argument = rawArgument.replace(config.PREFIX + command + ' ', '')
+
+    // Put rest of command here...
+
+	},
+}
